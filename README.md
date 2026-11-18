@@ -91,8 +91,8 @@ To train and evaluate a PET model for one of the supported tasks, simply run the
  - `$PATTERN_IDS` specifies the PVPs to use. For example, if you want to use *all* patterns, specify `PATTERN_IDS 0 1 2 3 4` for AG's News and Yahoo Questions or `PATTERN_IDS 0 1 2 3` for Yelp Reviews and MNLI.
  - `$DATA_DIR` is the directory containing the train and test files (check `tasks.py` to see how these files should be named and formatted for each task).
  - `$MODEL_TYPE` is the name of the model being used, e.g. `albert`, `bert` or `roberta`.
- - `$MODEL_NAME` is the name of a pretrained model (e.g., `roberta-large` or `albert-xxlarge-v2`) or the path to a pretrained model.
- - `$TASK_NAME` is the name of the task to train and evaluate on.
+ - `$MODEL_NAME_OR_PATH` is the name of a pretrained model (e.g., `roberta-large` or `albert-xxlarge-v2`) or the path to a pretrained model.
+ - `$TASK` is the name of the task to train and evaluate on.
  - `$OUTPUT_DIR` is the name of the directory in which the trained model and evaluation results are saved.
  
 You can additionally specify various training parameters for both the ensemble of PET models corresponding to individual PVPs (prefix `--pet_`) and for the final sequence classification model (prefix `--sc_`). For example, the default parameters used for our SuperGLUE evaluation are:
